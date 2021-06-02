@@ -50,3 +50,32 @@ export default {
     }
 }
 </script>
+
+<style>
+nav {
+    padding: 0 3.5rem;
+}
+
+.nav-item {
+    color: black;
+}
+
+.brand {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.brand:hover {
+    color: #58B727 !important;
+}
+
+a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.button {
+    background-color: #58b727;
+    color: #fff;
+}
+</style>
