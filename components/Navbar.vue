@@ -5,7 +5,7 @@
                 Outdoor Vibrations
             </b-navbar-item>
         </template>
-        <template #start >
+        <template #start>
             <b-navbar-item>
                 <NuxtLink to="/" class="nav-item">
                     Home

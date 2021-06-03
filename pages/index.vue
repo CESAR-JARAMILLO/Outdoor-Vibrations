@@ -1,6 +1,6 @@
 <template>
 <div>
-  <!-- <Navbar/> -->
+  <Navbar/>
   <main>
         <div class="left-col">
             <h1>Connecting to Nature</h1>
@@ -21,12 +21,12 @@
 </template>
 
 <script>
-// import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar'
 // import TheFooter from '../components/TheFooter'
 
 export default {
   components: {
-    // Navbar,
+    Navbar
     // TheFooter
   }
 }
