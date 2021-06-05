@@ -33,3 +33,56 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.featured {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.featured-text {
+    height: 350px;
+    width: 600px;
+    background-color: #40916c;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.featured-category {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b4332;
+}
+
+.featured-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.featured-date {
+    font-size: 16px;
+    font-weight: 400;
+    color: #e6e6e6;
+}
+
+.featured-image {
+    height: 350px;
+    width: 600px;
+    background-image: url('~@/assets/autumn.png');
+}
+
+.blog-cards {
+    margin: 0 10%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    /* justify-content: space-around; */
+    /* align-content: space-around; */
+}
+</style>
