@@ -25,3 +25,28 @@ export default {
 }
 </script>
 
+<style scoped>
+.card-content {
+    background-color: #1b4332;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-category {
+    color: #fff;
+}
+
+.card-title {
+    color: #fff;
+}
+
+.card-date {
+    padding-top: 10px;
+    color: #f2f2f2;
+}
+
+.card-author-img {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 5px;
+}
+</style>
