@@ -1,6 +1,9 @@
 <template>
   <article>
+    <img src="../../assets/autumn.png" alt="">
     <nuxt-content :document="article" />
+    <p>Post last updated: {{ article.updatedAt }}</p>
+    <pre> {{ article }} </pre>
   </article>
 </template>
 

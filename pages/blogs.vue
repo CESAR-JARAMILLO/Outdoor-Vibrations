@@ -1,7 +1,8 @@
 <template>
   <div>
       <Navbar />
-      <div class="featured">
+      <NuxtLink to="blog/my-first-blog">
+          <div class="featured">
           <div class="featured-text">
               <p class="featured-category">Featured</p>
               <h2 class="featured-title">The outdoors, breaking down the walls and reconnecting.</h2>
@@ -11,6 +12,7 @@
 
           </div>
       </div>
+      </NuxtLink>
       <div class="blog-cards">
           <BlogCard />
           <BlogCard />
