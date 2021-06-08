@@ -1,5 +1,7 @@
 <template>
+  
   <article>
+    <Navbar />
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
     <img :src="require(`~/assets/${article.img}`)" :alt="article.alt" />
@@ -19,11 +21,16 @@
 </template>
 
 <script>
+import Navbar from "../../components/Navbar"
+
   export default {
     async asyncData({ $content, params }) {
       const article = await $content('articles', params.slug).fetch()
 
       return { article }
+    },
+    components: {
+      Navbar
     },
     methods: {
     formatDate(date) {
