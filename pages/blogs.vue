@@ -1,11 +1,11 @@
 <template>
   <div>
       <Navbar />
-      <NuxtLink to="blog/my-first-blog">
+      <NuxtLink to="blog/my-first-blog-post">
           <div class="featured">
           <div class="featured-text">
               <p class="featured-category">Featured</p>
-              <h2 class="featured-title">The outdoors, breaking down the walls and reconnecting.</h2>
+              <h2 class="featured-title">{{articles[0].title}}</h2>
               <p class="featured-date">May 12, 2021</p>
           </div>
           <div class="featured-image">
@@ -28,6 +28,16 @@
 import Navbar from '../components/Navbar'
 import BlogCard from '../components/BlogCard'
 export default {
+    async asyncData({ $content, params }) {
+      const articles = await $content('articles')
+        .only(['title', 'description', 'img', 'slug', 'author'])
+        .sortBy('createdAt', 'asc')
+        .fetch()
+
+      return {
+        articles
+      }
+    },
     name: 'blogs',
     components: {
         Navbar,
