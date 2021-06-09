@@ -9,11 +9,9 @@
             <img src="../assets/mountain.png" alt="">
             <p>Here at Outdoor Vibrations we believe that the road to growth should have no end. With many paths of improvement, inner growth and strength is achieved with every step.</p>
             <p>Whether your connection to nature is vibrant, or are looking to taking your first steps. Adventure is better with company.</p>
-            <div class="buttons">
-              <a class="button">
+              <Nuxt-Link class="button" to="blogs">
                 <strong>Read Blog</strong>
-              </a>
-            </div>
+              </Nuxt-Link>
           </div>
         </div>
         <div class="right">
