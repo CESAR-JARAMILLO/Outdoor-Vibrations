@@ -16,7 +16,9 @@
       <div class="author-footer">
         <img class="author-footer-image" :src="require(`~/assets/${article.author.image}`)">
         <div class="author-footer-info">
-          <p class="author-footer-name">{{ article.author.name }}</p>
+          <p class="author-footer-name">
+            {{ article.author.name }}
+          </p>
           <p>{{ article.author.bio }}</p>
         </div>
       </div>
