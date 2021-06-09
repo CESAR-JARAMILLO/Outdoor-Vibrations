@@ -3,7 +3,7 @@
     <Navbar />
     <article>
       <img class="main-image" :src="require(`~/assets/${article.img}`)" :alt="article.alt">
-      <h1 class="title">
+      <h1 class="blogh-title">
         {{ article.title }}
       </h1>
       <div class="author">
@@ -54,7 +54,7 @@ article {
   width: 60%;
 }
 
-.title {
+.blog-title {
   margin-top: 2rem;
   font-size: 52px;
   margin-left: auto;
