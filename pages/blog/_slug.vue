@@ -3,7 +3,7 @@
     <Navbar />
     <article>
       <img class="main-image" :src="require(`~/assets/${article.img}`)" :alt="article.alt">
-      <h1 class="blogh-title">
+      <h1 class="blog-title">
         {{ article.title }}
       </h1>
       <div class="author">
