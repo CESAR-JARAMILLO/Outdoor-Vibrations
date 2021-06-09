@@ -8,10 +8,18 @@
       </h1>
       <div class="author">
         <img class="author-image" :src="require(`~/assets/${article.author.image}`)">
-        <p>Christina Jules</p>
+        <p>{{ article.author.name }}</p>
       </div>
       <hr>
       <nuxt-content :document="article" />
+      <hr>
+      <div class="author-footer">
+        <img class="author-footer-image" :src="require(`~/assets/${article.author.image}`)">
+        <div class="author-footer-info">
+          <p class="author-footer-name">{{ article.author.name }}</p>
+          <p>{{ article.author.bio }}</p>
+        </div>
+      </div>
     </article>
   </div>
 </template>
@@ -86,5 +94,25 @@ hr {
 
 .icon.icon-link {
   display: none;
+}
+
+.author-footer {
+  width: 40%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.author-footer-image {
+  height: 80px;
+  margin-right: 18px;
+}
+
+.author-footer-name {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 22px;
 }
 </style>
