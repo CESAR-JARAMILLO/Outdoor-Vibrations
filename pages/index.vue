@@ -62,6 +62,7 @@ h1 {
     color: #40916C;
     font-weight: 700;
     background: -webkit-linear-gradient(#40916C, #58B727);
+    background-clip: initial;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Montserrat', sans-serif;
