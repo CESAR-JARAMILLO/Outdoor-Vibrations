@@ -1,48 +1,68 @@
 <template>
   <div>
-      <Navbar />
-      <NuxtLink to="blog/my-first-blog-post">
-          <div class="featured">
-          <div class="featured-text">
-              <p class="featured-category">Featured</p>
-              <h2 class="featured-title">{{articles[0].title}}</h2>
-              <p class="featured-date">May 12, 2021</p>
-          </div>
-          <div class="featured-image">
-
-          </div>
+    <Navbar />
+    <NuxtLink to="blog/my-first-blog-post">
+      <div class="featured">
+        <div class="featured-text">
+          <p class="featured-category">
+            Featured
+          </p>
+          <h2 class="featured-title">
+            {{ articles[0].title }}
+          </h2>
+          <p class="featured-date">
+            May 12, 2021
+          </p>
+        </div>
+        <div class="featured-image" />
       </div>
-      </NuxtLink>
-      <div class="blog-cards">
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+    </NuxtLink>
+    <div class="blog-cards">
+      <div v-for="article of articles" :key="article.slug" class="card">
+        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img :src="require(`~/assets/${article.img}`)" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="card-category title is-6">
+                  {{ article.category }}
+                </p>
+              </div>
+            </div>
+            <div class="content">
+              <p class="card-title title is-4">
+                {{ article.title }}
+              </p>
+              <time class="card-date" datetime="2016-1-1">Jan 1, 2016</time>
+            </div>
+          </div>
+        </NuxtLink>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar'
-import BlogCard from '../components/BlogCard'
 export default {
-    async asyncData({ $content, params }) {
-      const articles = await $content('articles')
-        .only(['title', 'description', 'img', 'slug', 'author'])
-        .sortBy('createdAt', 'asc')
-        .fetch()
+  name: 'Blogs',
+  components: {
+    Navbar
+  },
+  async asyncData ({ $content, params }) {
+    const articles = await $content('articles')
+      .only(['title', 'description', 'img', 'slug', 'author', 'category'])
+      .sortBy('createdAt', 'asc')
+      .fetch()
 
-      return {
-        articles
-      }
-    },
-    name: 'blogs',
-    components: {
-        Navbar,
-        BlogCard
+    return {
+      articles
     }
+  }
 }
 </script>
 
@@ -96,5 +116,32 @@ export default {
     grid-gap: 2rem;
     /* justify-content: space-around; */
     /* align-content: space-around; */
+}
+
+.card-content {
+    background-color: #1b4332;
+    font-family: 'Roboto', sans-serif;
+    height: 220px;
+}
+
+.card-category {
+    color: #fff;
+}
+
+.card-title {
+    color: #fff;
+}
+
+.card-date {
+    padding-top: 10px;
+    color: #f2f2f2;
+    position: absolute;
+    bottom: 20px;
+}
+
+.card-author-img {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 5px;
 }
 </style>
