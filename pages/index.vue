@@ -28,12 +28,10 @@
 
 <script>
 import Navbar from '../components/Navbar'
-// import TheFooter from '../components/TheFooter'
 
 export default {
   components: {
     Navbar
-    // TheFooter
   }
 }
 </script>
@@ -41,7 +39,6 @@ export default {
 <style scoped>
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
