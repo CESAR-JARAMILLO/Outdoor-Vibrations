@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <main>
+    <div class="main">
       <div class="left-col">
         <h1>Connecting to Nature</h1>
         <h2>Have a love for all things that are outdoors?</h2>
@@ -19,49 +19,56 @@
         </div>
       </div>
       <div class="right-col">
-        <img src="../assets/landing-pic.png" alt="">
+        <img class="landing-image" src="../assets/landing-pic.png" alt="">
       </div>
-    </main>
+    </div>
     <img class="vector" src="../assets/vector.png" alt="">
   </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar'
-
 export default {
   components: {
     Navbar
   }
+
 }
 </script>
 
 <style scoped>
-* {
+*{
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-.vector {
-  position: absolute;
-  bottom: 0rem;
-  left: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 50vh;
 }
 
-main {
-    margin-top: 40px;
-    height: 60vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-family: 'Montserrat', sans-serif;
+.main {
+  display: flex;
+  text-align: center;
+  flex-direction: column-reverse;
+  margin-top: 20px;
+  justify-content: space-around;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-container {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
 }
 
 h1 {
-    font-size: 64px;
-    width: 400px;
+    font-size: 54px;
+    width: 90%;
     color: #40916C;
     font-weight: 700;
     background: -webkit-linear-gradient(#40916C, #58B727);
@@ -73,50 +80,90 @@ h1 {
 
 h2 {
     font-size: 30px;
-    width: 400px;
+    width: 75%;
     font-weight: 400;
+    margin: 20px;
 }
 
-.left-col {
-    /* padding: 40px 0 40px 100px; */
+.btn {
+    background: linear-gradient(180deg, #58B727, #40916C);
+    color: #fff;
+    width: 140px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.landing-image {
+  height: 180px;
+}
+
+.vector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (min-width: 780px) {
+  .landing-image {
+    height: 240px;
+  }
+
+  h2 {
+    width: 50%;
+  }
+
+  .vector {
+    height: 250px;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+    height: 60vh;
+    margin-top: 40px;
+  }
+
+  .left-col {
     align-items: center;
-}
+  }
 
-.btn-container {
-    width: 440px;
-    display: flex;
-    justify-content: space-between;
-    /* margin-top: 20px; */
-}
-
-.right-col {
+  .right-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.right-col img {
-    /* margin-top: 50px; */
-    height: 28rem;
-}
+  h1 {
+    font-size: 64px;
+    width: 80%;
+  }
+  h2 {
+    width: 80%;
+  }
 
-.btn {
-    /* margin-right: 2.5rem; */
-    /* margin-top: 1rem; */
-    background: linear-gradient(180deg, #58B727, #40916C);
-    color: #fff;
-    width: 200px;
+  .landing-image {
+    height: 440px;
+    margin-right: 20px;
+  }
+
+  .btn-container {
+    width: 80%;
+    justify-content: left;
+  }
+
+  .btn {
+    margin-right: 22px;
     height: 70px;
-    border: none;
-    border-radius: 5px;
-    font-size: 30px;
-}
-
-.footer-container {
-  margin-top: 7rem;
+    width: 200px;
+    font-size: 24px;
+  }
 }
 </style>
