@@ -1,27 +1,23 @@
 <template>
   <div>
     <Navbar />
-    <div class="main">
-      <div class="left-col">
-        <h1>Connecting to Nature</h1>
-        <h2>Have a love for all things that are outdoors?</h2>
-        <div class="btn-container">
-          <NuxtLink to="subscribe">
-            <button class="btn" href="">
-              Join Now
-            </button>
-          </NuxtLink>
-          <NuxtLink to="blogs">
-            <button class="btn" href="">
-              Read Blog
-            </button>
-          </NuxtLink>
+    <main>
+      <div class="left">
+        <div class="about-card">
+          <!-- <h3>Passion</h3> -->
+          <h2>A journey of truth, with no destination.</h2>
+          <!-- <img src="../assets/mountain.png" alt=""> -->
+          <p>Here at Outdoor Vibrations we believe that the road to growth should have no end. With many paths of improvement, inner growth and strength is achieved with every step.</p>
+          <p>Whether your connection to nature is vibrant, or are looking to taking your first steps. Adventure is better with company.</p>
+          <Nuxt-Link class="button" to="blogs">
+            <strong>Read Blog</strong>
+          </Nuxt-Link>
         </div>
       </div>
-      <div class="right-col">
-        <img class="landing-image" src="../assets/landing-pic.png" alt="">
+      <div class="right">
+        <img class="main-image" src="../assets/about-pic.png" alt="">
       </div>
-    </div>
+    </main>
     <img class="vector" src="../assets/vector.png" alt="">
   </div>
 </template>
@@ -43,76 +39,153 @@ export default {
   box-sizing: border-box;
 }
 
-.main {
+main {
   display: flex;
   text-align: center;
   flex-direction: column-reverse;
-  margin-top: 40px;
-  /* height: 60vh; */
-  justify-content: space-around;
+  margin-top: 20px;
+  justify-content: flex-end;
   font-family: 'Montserrat', sans-serif;
+  /* height: 500px; */
 }
 
-.left-col {
-    /* margin-top: 20px; */
+.main-image {
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+.left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn-container {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    /* margin-top: 20px; */
+.about-card {
+  /* font-family: 'Roboto', sans-serif; */
+  /* margin-top: 3rem; */
+  /* margin-left: 2.5rem; */
+  padding: 0 18px;
+  height: 60vh;
+  width: 100%;
+  border-radius: 10px;
+  /* text-align: center; */
+  /* background-color: #fff; */
+  color: #40916C;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
 }
 
-h1 {
-    font-size: 54px;
-    width: 90%;
-    color: #40916C;
-    font-weight: 700;
-    background: -webkit-linear-gradient(#40916C, #58B727);
-    background-clip: initial;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Montserrat', sans-serif;
+.about-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b4332;
+  width: 380px;
+  /* background-color: #fff; */
 }
 
-h2 {
-    font-size: 30px;
-    width: 90%;
-    font-weight: 400;
-    margin: 20px;
+.about-card h3 {
+  /* margin-top: 1.5rem; */
+  font-size: 20px;
+  font-weight: 500;
+  /* margin-top: 20px; */
+  color: #1b4332;
 }
 
-.btn {
-    /* margin-right: 2.5rem; */
-    /* margin-top: 1rem; */
+.about-card h2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 32px;
+  font-weight: 600;
+  width: 320px;
+}
+
+.button {
     background: linear-gradient(180deg, #58B727, #40916C);
     color: #fff;
-    width: 100px;
-    height: 35px;
+    width: 140px;
+    height: 60px;
     border: none;
     border-radius: 5px;
-    font-size: 15px;
-}
-
-.landing-image {
-  /* margin-top: 20px; */
-  height: 180px;
-  /* width: 200px; */
-  /* margin: auto; */
+    font-size: 18px;
+    margin-top: 28px;
 }
 
 .vector {
-  /* margin-left: 10px; */
-  position: absolute;
+  /* padding-top: 40px; */
+  /* position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
-  /* width: 500px; */
-  /* height: 200px; */
+  z-index: -1; */
+  margin-top: -180px;
+}
+
+@media (min-width: 780px) {
+  .main-image {
+    height: 240px;
+  }
+
+  .about-card h2 {
+    width: 400px;
+    font-size: 38px;
+  }
+
+  .about-card p {
+    width: 460px;
+    font-size: 16px;
+  }
+
+  .vector {
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* z-index: -1; */
+    height: 250px;
+    width: 100vw;
+    /* margin-top: 0; */
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    /* height: 70vh; */
+    margin-top: 40px;
+  }
+
+  .left {
+    align-items: center;
+    width: 50%;
+    text-align: center;
+  }
+
+  .about-card h2 {
+    width: 480px;
+    font-size: 44px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .vector {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .main-image {
+    height: 420px;
+    margin-right: 20px;
+  }
 }
 </style>

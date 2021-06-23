@@ -4,6 +4,7 @@ description: Learning how to use @nuxt/content to create a blog
 slug: my-first-blog-post
 img: autumn.png
 alt: my first blog post
+category: Featured
 
 author:
   name: Christina Jules
