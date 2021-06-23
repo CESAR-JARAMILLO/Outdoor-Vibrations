@@ -6,7 +6,7 @@
         <div class="about-card">
           <!-- <h3>Passion</h3> -->
           <h2>A journey of truth, with no destination.</h2>
-          <!-- <img src="../assets/mountain.png" alt=""> -->
+          <img src="../assets/mountain.png" alt="">
           <p>Here at Outdoor Vibrations we believe that the road to growth should have no end. With many paths of improvement, inner growth and strength is achieved with every step.</p>
           <p>Whether your connection to nature is vibrant, or are looking to taking your first steps. Adventure is better with company.</p>
           <Nuxt-Link class="button" to="blogs">
@@ -46,7 +46,6 @@ main {
   margin-top: 20px;
   justify-content: flex-end;
   font-family: 'Montserrat', sans-serif;
-  /* height: 500px; */
 }
 
 .main-image {
@@ -112,6 +111,7 @@ main {
     border-radius: 5px;
     font-size: 18px;
     margin-top: 28px;
+    /* padding-bottom: 28px; */
 }
 
 .vector {
@@ -121,6 +121,13 @@ main {
   left: 0;
   z-index: -1; */
   margin-top: -180px;
+}
+
+@media (max-height: 720px) {
+  main {
+    height: 720px;
+
+  }
 }
 
 @media (min-width: 780px) {
