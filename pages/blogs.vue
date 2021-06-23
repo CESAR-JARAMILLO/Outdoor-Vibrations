@@ -67,7 +67,58 @@ export default {
 </script>
 
 <style scoped>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .featured {
+    display: none;
+}
+
+.blog-cards {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.card {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.card-content {
+    background-color: #1b4332;
+    font-family: 'Roboto', sans-serif;
+    height: 220px;
+    padding: 14px 16px 0 16px;
+}
+
+.card-category {
+    color: #fff;
+}
+
+.card-title {
+    color: #fff;
+}
+
+.card-date {
+    padding-top: 10px;
+    color: #f2f2f2;
+    position: absolute;
+    bottom: 20px;
+}
+
+@media (min-width: 420px) {
+  .card {
+    width: 400px;
+  }
+}
+
+@media (min-width: 780px) {
+  .featured {
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -91,7 +142,7 @@ export default {
 }
 
 .featured-title {
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 600;
     color: #fff;
 }
@@ -108,40 +159,31 @@ export default {
     background-image: url('~@/assets/autumn.png');
 }
 
-.blog-cards {
-    margin: 0 10%;
-    margin-top: 60px;
+  .blog-cards {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 36px; */
+    /* align-items: flex-end; */
+    /* margin: 0 15%; */
+    /* justify-content: space-evenly; */
+  justify-items: center;
+  /* align-content: space-evenly; */
+  /* align-items: center; */
+  }
+
+  .card {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-cards {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    /* justify-content: space-around; */
-    /* align-content: space-around; */
+  }
+
+  .featured-title {
+    font-size: 44px;
+  }
 }
 
-.card-content {
-    background-color: #1b4332;
-    font-family: 'Roboto', sans-serif;
-    height: 220px;
-}
-
-.card-category {
-    color: #fff;
-}
-
-.card-title {
-    color: #fff;
-}
-
-.card-date {
-    padding-top: 10px;
-    color: #f2f2f2;
-    position: absolute;
-    bottom: 20px;
-}
-
-.card-author-img {
-    height: 48px;
-    width: 48px;
-    margin-bottom: 5px;
-}
 </style>

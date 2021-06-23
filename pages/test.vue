@@ -1,29 +1,68 @@
 <template>
   <div>
     <Navbar />
-    <main>
-      <div class="left">
-        <div class="subscribe-card">
-          <h2>Connect to our community</h2>
-          <p>Get email updates from Outdoor Vibrations and stay up-to-date on all of our new posts. We’ll also let you know when we have any special deals.</p>
-          <form action="">
-            <input type="text" placeholder="name">
-            <input type="email" placeholder="email">
-            <button>Subscribe</button>
-          </form>
+    <NuxtLink to="blog/my-first-blog-post">
+      <div class="featured">
+        <div class="featured-text">
+          <p class="featured-category">
+            Featured
+          </p>
+          <h2 class="featured-title">
+            {{ articles[0].title }}
+          </h2>
+          <p class="featured-date">
+            May 12, 2021
+          </p>
         </div>
+        <div class="featured-image" />
       </div>
-      <div class="right">
-        <img class="main-image" src="../assets/blogging.png" alt="">
+    </NuxtLink>
+    <div class="blog-cards">
+      <div v-for="article of articles" :key="article.slug" class="card">
+        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img :src="require(`~/assets/${article.img}`)" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="card-category title is-6">
+                  {{ article.category }}
+                </p>
+              </div>
+            </div>
+            <div class="content">
+              <p class="card-title title is-4">
+                {{ article.title }}
+              </p>
+              <time class="card-date" datetime="2016-1-1">Jan 1, 2016</time>
+            </div>
+          </div>
+        </NuxtLink>
       </div>
-    </main>
-    <img class="vector" src="../assets/vector.png" alt="">
+    </div>
   </div>
 </template>
 
 <script>
+import Navbar from '../components/Navbar'
 export default {
+  name: 'Blogs',
+  components: {
+    Navbar
+  },
+  async asyncData ({ $content, params }) {
+    const articles = await $content('articles')
+      .only(['title', 'description', 'img', 'slug', 'author', 'category'])
+      .sortBy('createdAt', 'asc')
+      .fetch()
 
+    return {
+      articles
+    }
+  }
 }
 </script>
 
@@ -34,139 +73,116 @@ export default {
   box-sizing: border-box;
 }
 
-main {
-  display: flex;
-  text-align: center;
-  flex-direction: column-reverse;
-  margin-top: 20px;
-  justify-content: space-around;
-  font-family: 'Montserrat', sans-serif;
+.featured {
+    display: none;
 }
 
-.left {
-  align-items: center;
-}
-
-.subscribe-card {
-  /* font-family: 'Roboto', sans-serif; */
-  /* margin-top: 3rem; */
-  /* margin-left: 2.5rem; */
-  padding: 0 18px;
-  height: 550px;
-  width: 100%;
-  border-radius: 10px;
-  text-align: center;
-  background-color: #40916C;
-  color: #fff;
+.blog-cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: center; */
   align-items: center;
-  margin: auto;
 }
 
-.subscribe-card h2 {
-    font-size: 44px;
-    font-weight: 600;
+.card {
+    width: 100%;
+    margin-top: 40px;
 }
 
-.subscribe-card p {
-    font-size: 20px;
-    font-weight: 400;
+.card-content {
+    background-color: #1b4332;
+    font-family: 'Roboto', sans-serif;
+    height: 220px;
+    padding: 14px 16px 0 16px;
 }
 
-.subscribe-card form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-    width: 300px;
-
-}
-
-form input {
-    width: 300px;
-    height: 50px;
-    border-radius: 5px;
-    border: none;
-}
-
-form button {
-    height: 40px;
-    width: 120px;
-    border-radius: 5px;
-    border: none;
-    background-color:   #58b727;
+.card-category {
     color: #fff;
 }
 
-.right {
-  margin: auto;
+.card-title {
+    color: #fff;
 }
 
-.main-image {
-  height: 180px;
+.card-date {
+    padding-top: 10px;
+    color: #f2f2f2;
+    position: absolute;
+    bottom: 20px;
 }
 
-@media (min-width: 520px) {
-  .subscribe-card {
-    width: 500px;
+@media (min-width: 420px) {
+  .card {
+    width: 400px;
   }
 }
 
 @media (min-width: 780px) {
-  .main-image {
-    height: 260px;
+  .featured {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.featured-text {
+    height: 350px;
+    width: 600px;
+    background-color: #40916c;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.featured-category {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b4332;
+}
+
+.featured-title {
+    font-size: 38px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.featured-date {
+    font-size: 16px;
+    font-weight: 400;
+    color: #e6e6e6;
+}
+
+.featured-image {
+    height: 350px;
+    width: 600px;
+    background-image: url('~@/assets/autumn.png');
+}
+
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 36px; */
+    /* align-items: flex-end; */
+    /* margin: 0 15%; */
+    /* justify-content: space-evenly; */
+  justify-items: center;
+  /* align-content: space-evenly; */
+  /* align-items: center; */
   }
 
-  .subscribe-card {
-    width: 540px;
-  }
-
-  .vector {
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* left: 0; */
-    /* z-index: -1; */
-    height: 250px;
-    width: 100vw;
-    /* margin-top: 0; */
+  .card {
+    width: 350px;
   }
 }
 
 @media (min-width: 1024px) {
-  main {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    /* height: 70vh; */
-    margin-top: 40px;
+  .blog-cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .left {
-    align-items: center;
-    width: 50%;
-    text-align: center;
-  }
-
-  .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-  }
-
-  .main-image {
-    height: 500px;
-    margin-left: 20px;
-  }
-
-  .vector {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
+  .featured-title {
+    font-size: 44px;
   }
 }
 
