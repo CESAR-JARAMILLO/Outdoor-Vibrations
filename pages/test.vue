@@ -3,19 +3,18 @@
     <Navbar />
     <main>
       <div class="left">
-        <div class="about-card">
-          <!-- <h3>Passion</h3> -->
-          <h2>A journey of truth, with no destination.</h2>
-          <img src="../assets/mountain.png" alt="">
-          <p>Here at Outdoor Vibrations we believe that the road to growth should have no end. With many paths of improvement, inner growth and strength is achieved with every step.</p>
-          <p>Whether your connection to nature is vibrant, or are looking to taking your first steps. Adventure is better with company.</p>
-          <Nuxt-Link class="button" to="blogs">
-            <strong>Read Blog</strong>
-          </Nuxt-Link>
+        <div class="subscribe-card">
+          <h2>Connect to our community</h2>
+          <p>Get email updates from Outdoor Vibrations and stay up-to-date on all of our new posts. We’ll also let you know when we have any special deals.</p>
+          <form action="">
+            <input type="text" placeholder="name">
+            <input type="email" placeholder="email">
+            <button>Subscribe</button>
+          </form>
         </div>
       </div>
       <div class="right">
-        <img class="main-image" src="../assets/about-pic.png" alt="">
+        <img class="main-image" src="../assets/blogging.png" alt="">
       </div>
     </main>
     <img class="vector" src="../assets/vector.png" alt="">
@@ -23,11 +22,7 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 export default {
-  components: {
-    Navbar
-  }
 
 }
 </script>
@@ -44,105 +39,89 @@ main {
   text-align: center;
   flex-direction: column-reverse;
   margin-top: 20px;
-  justify-content: flex-end;
+  justify-content: space-around;
   font-family: 'Montserrat', sans-serif;
 }
 
-.main-image {
-  height: 180px;
-  margin-bottom: 20px;
-}
-
 .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  align-items: center;
 }
 
-.about-card {
+.subscribe-card {
   /* font-family: 'Roboto', sans-serif; */
   /* margin-top: 3rem; */
   /* margin-left: 2.5rem; */
   padding: 0 18px;
-  height: 60vh;
+  height: 550px;
   width: 100%;
   border-radius: 10px;
-  /* text-align: center; */
-  /* background-color: #fff; */
-  color: #40916C;
+  text-align: center;
+  background-color: #40916C;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-around;
   align-items: center;
+  margin: auto;
 }
 
-.about-card p {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #1b4332;
-  width: 380px;
-  /* background-color: #fff; */
+.subscribe-card h2 {
+    font-size: 44px;
+    font-weight: 600;
 }
 
-.about-card h3 {
-  /* margin-top: 1.5rem; */
-  font-size: 20px;
-  font-weight: 500;
-  /* margin-top: 20px; */
-  color: #1b4332;
+.subscribe-card p {
+    font-size: 20px;
+    font-weight: 400;
 }
 
-.about-card h2 {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  font-size: 32px;
-  font-weight: 600;
-  width: 320px;
+.subscribe-card form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+
 }
 
-.button {
-    background: linear-gradient(180deg, #58B727, #40916C);
-    color: #fff;
-    width: 140px;
-    height: 60px;
-    border: none;
+form input {
+    width: 300px;
+    height: 50px;
     border-radius: 5px;
-    font-size: 18px;
-    margin-top: 28px;
-    /* padding-bottom: 28px; */
+    border: none;
 }
 
-.vector {
-  /* padding-top: 40px; */
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1; */
-  margin-top: -180px;
+form button {
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    background-color:   #58b727;
+    color: #fff;
 }
 
-@media (max-height: 720px) {
-  main {
-    height: 720px;
+.right {
+  margin: auto;
+}
 
+.main-image {
+  height: 180px;
+}
+
+@media (min-width: 520px) {
+  .subscribe-card {
+    width: 500px;
   }
 }
 
 @media (min-width: 780px) {
   .main-image {
-    height: 240px;
+    height: 260px;
   }
 
-  .about-card h2 {
-    width: 400px;
-    font-size: 38px;
-  }
-
-  .about-card p {
-    width: 460px;
-    font-size: 16px;
+  .subscribe-card {
+    width: 540px;
   }
 
   .vector {
@@ -171,11 +150,6 @@ main {
     text-align: center;
   }
 
-  .about-card h2 {
-    width: 480px;
-    font-size: 44px;
-  }
-
   .right {
     display: flex;
     flex-direction: column;
@@ -184,15 +158,16 @@ main {
     width: 50%;
   }
 
+  .main-image {
+    height: 500px;
+    margin-left: 20px;
+  }
+
   .vector {
     position: absolute;
     bottom: 0;
     z-index: -1;
   }
-
-  .main-image {
-    height: 420px;
-    margin-right: 20px;
-  }
 }
+
 </style>

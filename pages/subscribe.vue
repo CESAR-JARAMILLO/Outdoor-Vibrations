@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="right">
-        <img src="../assets/blogging.png" alt="">
+        <img class="main-image" src="../assets/blogging.png" alt="">
       </div>
     </main>
     <img class="vector" src="../assets/vector.png" alt="">
@@ -32,34 +32,23 @@ export default {
 </script>
 
 <style scoped>
-* {
+*{
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 main {
-    margin-top: 40px;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-family: 'Roboto', sans-serif;
-}
-.left {
   display: flex;
-  justify-content: center;
+  text-align: center;
+  flex-direction: column-reverse;
+  margin-top: 20px;
+  justify-content: space-around;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.left {
   align-items: center;
-}
-
-.right {
-    /* padding: 40px 0 40px 100px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.right img {
-  height: 480px;
-  /* width: 35rem; */
 }
 
 .subscribe-card {
@@ -68,7 +57,7 @@ main {
   /* margin-left: 2.5rem; */
   padding: 0 18px;
   height: 550px;
-  width: 450px;
+  width: 100%;
   border-radius: 10px;
   text-align: center;
   background-color: #40916C;
@@ -77,6 +66,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin: auto;
 }
 
 .subscribe-card h2 {
@@ -115,13 +105,73 @@ form button {
     color: #fff;
 }
 
-.vector {
-  position: absolute;
-  bottom: 0rem;
-  left: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 50vh;
-  /* margin-bottom: 20px; */
+.right {
+  margin: auto;
 }
+
+.main-image {
+  height: 180px;
+}
+
+@media (min-width: 520px) {
+  .subscribe-card {
+    width: 500px;
+  }
+}
+
+@media (min-width: 780px) {
+  .main-image {
+    height: 260px;
+  }
+
+  .subscribe-card {
+    width: 540px;
+  }
+
+  .vector {
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* z-index: -1; */
+    height: 250px;
+    width: 100vw;
+    /* margin-top: 0; */
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    /* height: 70vh; */
+    margin-top: 40px;
+  }
+
+  .left {
+    align-items: center;
+    width: 50%;
+    text-align: center;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .main-image {
+    height: 500px;
+    margin-left: 20px;
+  }
+
+  .vector {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
 </style>
