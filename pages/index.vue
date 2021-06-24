@@ -106,6 +106,18 @@ h2 {
   z-index: -1;
 }
 
+@media (max-height: 720px) {
+  .main {
+    height: 720px;
+
+  }
+
+  .vector {
+    margin-top: -80px;
+    position: relative;
+  }
+}
+
 @media (min-width: 780px) {
   .landing-image {
     height: 240px;

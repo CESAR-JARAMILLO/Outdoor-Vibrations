@@ -56,15 +56,16 @@ article {
 
 .blog-title {
   margin-top: 2rem;
-  font-size: 52px;
+  margin-bottom: 18px;
+  font-size: 36px;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 80%;
   }
 
 hr {
   margin: 1rem auto;
-  width: 50%;
+  width: 60%;
 }
 
 .author {
@@ -80,7 +81,7 @@ hr {
 }
 
 .nuxt-content {
-  width: 60%;
+  width: 74%;
   margin: auto;
   text-align: left;
 }
@@ -90,7 +91,7 @@ hr {
 }
 
 .nuxt-content h2 {
-  font-size: 40px;
+  font-size: 30px;
   margin-left: 0;
 }
 
@@ -102,9 +103,10 @@ hr {
   width: 40%;
   margin: 30px auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
 }
 
 .author-footer-image {
