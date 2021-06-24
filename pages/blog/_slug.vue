@@ -19,7 +19,9 @@
           <p class="author-footer-name">
             {{ article.author.name }}
           </p>
-          <p>{{ article.author.bio }}</p>
+          <p class="author-footer-bio">
+            {{ article.author.bio }}
+          </p>
         </div>
       </div>
     </article>
@@ -100,7 +102,7 @@ hr {
 }
 
 .author-footer {
-  width: 40%;
+  width: 60%;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
@@ -118,5 +120,13 @@ hr {
   margin-bottom: 8px;
   font-weight: bold;
   font-size: 22px;
+}
+
+@media (min-width: 720px) {
+  .author-footer {
+    flex-direction: row;
+    width: 40%;
+    text-align: left;
+  }
 }
 </style>
