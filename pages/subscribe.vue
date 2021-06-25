@@ -113,6 +113,10 @@ form button {
   height: 180px;
 }
 
+.freebirdFormviewerViewFooterEmbeddedBackground {
+  display: none !important;
+}
+
 @media (min-width: 520px) {
   .subscribe-card {
     width: 500px;

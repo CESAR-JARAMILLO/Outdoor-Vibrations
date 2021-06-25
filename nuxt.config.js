@@ -18,11 +18,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/vee-validate', ssr: false }
   ],
-  env: {
-    mailchimpApiKey: process.env.MALCHIMP_API_KEY || '05ee75b63a967bdf21d7abaaab72d1e6-us6'
-  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
