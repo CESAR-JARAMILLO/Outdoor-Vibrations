@@ -52,9 +52,6 @@ main {
 }
 
 .subscribe-card {
-  /* font-family: 'Roboto', sans-serif; */
-  /* margin-top: 3rem; */
-  /* margin-left: 2.5rem; */
   padding: 0 18px;
   height: 550px;
   width: 100%;
@@ -133,13 +130,8 @@ form button {
   }
 
   .vector {
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* left: 0; */
-    /* z-index: -1; */
     height: 250px;
     width: 100vw;
-    /* margin-top: 0; */
   }
 }
 
@@ -148,7 +140,6 @@ form button {
     display: flex;
     flex-direction: row;
     text-align: left;
-    /* height: 70vh; */
     margin-top: 40px;
   }
 

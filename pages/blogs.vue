@@ -80,7 +80,6 @@ export default {
 .blog-cards {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -162,13 +161,7 @@ export default {
   .blog-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-gap: 36px; */
-    /* align-items: flex-end; */
-    /* margin: 0 15%; */
-    /* justify-content: space-evenly; */
-  justify-items: center;
-  /* align-content: space-evenly; */
-  /* align-items: center; */
+    justify-items: center;
   }
 
   .card {

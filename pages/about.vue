@@ -62,19 +62,13 @@ main {
 }
 
 .about-card {
-  /* font-family: 'Roboto', sans-serif; */
-  /* margin-top: 3rem; */
-  /* margin-left: 2.5rem; */
   padding: 0 18px;
   height: 60vh;
   width: 100%;
   border-radius: 10px;
-  /* text-align: center; */
-  /* background-color: #fff; */
   color: #40916C;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -84,14 +78,11 @@ main {
   font-weight: 500;
   color: #1b4332;
   width: 380px;
-  /* background-color: #fff; */
 }
 
 .about-card h3 {
-  /* margin-top: 1.5rem; */
   font-size: 20px;
   font-weight: 500;
-  /* margin-top: 20px; */
   color: #1b4332;
 }
 
@@ -112,15 +103,9 @@ main {
     border-radius: 5px;
     font-size: 18px;
     margin-top: 28px;
-    /* padding-bottom: 28px; */
 }
 
 .vector {
-  /* padding-top: 40px; */
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1; */
   margin-top: -180px;
 }
 
@@ -147,13 +132,8 @@ main {
   }
 
   .vector {
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* left: 0; */
-    /* z-index: -1; */
     height: 250px;
     width: 100vw;
-    /* margin-top: 0; */
   }
 }
 
@@ -162,7 +142,6 @@ main {
     display: flex;
     flex-direction: row;
     text-align: left;
-    /* height: 70vh; */
     margin-top: 40px;
   }
 
