@@ -6,32 +6,26 @@
       </b-navbar-item>
     </template>
     <template #start>
-      <b-navbar-item>
-        <NuxtLink to="/" class="nav-item">
-          Home
-        </NuxtLink>
-      </b-navbar-item>
-      <b-navbar-item>
-        <NuxtLink to="/about" class="nav-item">
-          About
-        </NuxtLink>
-      </b-navbar-item>
-      <b-navbar-item>
-        <NuxtLink to="/blogs" class="nav-item">
-          Blog
-        </NuxtLink>
-      </b-navbar-item>
+      <nuxt-link to="/" class="nav-item navbar-item">
+        Home
+      </nuxt-link>
+      <nuxt-link to="/about" class="nav-item navbar-item">
+        About
+      </nuxt-link>
+      <nuxt-link to="/blogs" class="nav-item navbar-item">
+        Blog
+      </nuxt-link>
     </template>
 
     <template #end>
       <b-navbar-item tag="div">
-        <NuxtLink to="/subscribe">
+        <nuxt-link to="/subscribe">
           <div class="buttons">
             <a class="button">
               <strong>Subscribe</strong>
             </a>
           </div>
-        </NuxtLink>
+        </nuxt-link>
       </b-navbar-item>
     </template>
   </b-navbar>
