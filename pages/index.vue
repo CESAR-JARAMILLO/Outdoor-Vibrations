@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <!-- <Navbar /> -->
     <div class="main">
       <div class="left-col">
         <h1>Connecting to Nature</h1>
@@ -27,12 +27,7 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 export default {
-  components: {
-    Navbar
-  }
-
 }
 </script>
 

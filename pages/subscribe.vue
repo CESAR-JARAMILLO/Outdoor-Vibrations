@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <!-- <Navbar /> -->
     <main>
       <div class="left">
         <div class="subscribe-card">
@@ -22,12 +22,8 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 export default {
-  name: 'Subscribe',
-  components: {
-    Navbar
-  }
+  name: 'Subscribe'
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <!-- <Navbar /> -->
     <article>
       <img class="main-image" :src="require(`~/assets/${article.img}`)" :alt="article.alt">
       <h1 class="blog-title">
@@ -29,12 +29,7 @@
 </template>
 
 <script>
-import Navbar from '../../components/Navbar'
-
 export default {
-  components: {
-    Navbar
-  },
   async asyncData ({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
