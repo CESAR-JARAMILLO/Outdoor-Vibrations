@@ -57,7 +57,7 @@ main {
 
 .about-card {
   padding: 0 18px;
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   border-radius: 10px;
   color: #40916C;
@@ -102,6 +102,7 @@ main {
 
 .button:hover {
   width: 160px;
+  height: 60px;
 }
 
 .vector {
