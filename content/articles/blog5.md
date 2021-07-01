@@ -1,7 +1,7 @@
 ---
 title: Setting up a shelter in the wild.
 description: Learning how to use @nuxt/content to create a blog
-slug: fifth-blog
+slug: blog5
 img: blogpic5.jpg
 alt: fifth blog
 category: Camping

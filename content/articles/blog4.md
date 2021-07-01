@@ -1,7 +1,7 @@
 ---
 title: The theraputic healing of being one with Nature.
 description: Learning how to use @nuxt/content to create a blog
-slug: fourth-blog
+slug: blog4
 img: blogpic4.jpg
 alt: fourth blog
 category: Health

@@ -1,7 +1,7 @@
 ---
 title: Changing mentality with the changing seasons.
 description: Learning how to use @nuxt/content to create a blog
-slug: sixth-blog
+slug: blog6
 img: autumn.png
 alt: sixth blog
 category: Health
