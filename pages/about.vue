@@ -68,6 +68,7 @@ main {
 
 .about-card p {
   margin-top: 10px;
+  padding: 0 16px;
   font-size: 14px;
   font-weight: 500;
   color: #1b4332;
