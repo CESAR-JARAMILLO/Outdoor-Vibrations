@@ -66,7 +66,7 @@ nav {
 }
 
 .nuxt-link-active {
-  color: #40916c !important;
+  color: black !important;
 }
 
 a {
