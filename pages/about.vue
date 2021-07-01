@@ -99,6 +99,10 @@ main {
     margin-top: 28px;
 }
 
+.button:hover {
+  width: 160px;
+}
+
 .vector {
   margin-top: -180px;
 }
