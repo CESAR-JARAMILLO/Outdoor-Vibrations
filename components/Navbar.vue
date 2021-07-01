@@ -65,6 +65,10 @@ nav {
     color: #58B727 !important;
 }
 
+.nuxt-link-active {
+  color: #40916c !important;
+}
+
 a {
     font-size: 18px;
     font-weight: 600;
