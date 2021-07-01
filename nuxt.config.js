@@ -18,7 +18,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/vee-validate', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -57,15 +56,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    // Add exception
-    transpile: [
-      'vee-validate/dist/rules'
-    ],
-    /*
-      ** You can extend webpack config here
-      */
-    extend (config, ctx) {
-      // ...
-    }
   }
 }
