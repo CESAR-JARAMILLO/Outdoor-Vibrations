@@ -52,6 +52,10 @@ nav {
     color: black;
 }
 
+.nav-item:hover {
+  color: #58B727 !important;
+}
+
 .brand {
     font-size: 36px;
     font-weight: bold;
@@ -67,7 +71,13 @@ a {
 }
 
 .button {
-    background-color: #58b727;
+    background-color:#40916c;
+    /* background-color: #58b727; */
     color: #fff;
+}
+
+.button:hover {
+  background-color: #58b727;
+  color: #fff;
 }
 </style>
