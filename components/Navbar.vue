@@ -45,7 +45,7 @@ export default {
 
 <style>
 nav {
-    padding: 0 3.5rem;
+    padding: 0 12px;
 }
 
 .nav-item {
@@ -57,7 +57,7 @@ nav {
 }
 
 .brand {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -83,5 +83,11 @@ a {
 .button:hover {
   background-color: #58b727;
   color: #fff;
+}
+
+@media (min-width: 780px) {
+  .brand {
+    font-size: 36px;
+  }
 }
 </style>
