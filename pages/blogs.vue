@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <NuxtLink to="blog/my-first-blog-post">
       <div class="featured">
         <div class="featured-text">
@@ -47,12 +46,8 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 export default {
   name: 'Blogs',
-  components: {
-    Navbar
-  },
   async asyncData ({ $content, params }) {
     const articles = await $content('articles')
       .only(['title', 'description', 'img', 'slug', 'author', 'category'])

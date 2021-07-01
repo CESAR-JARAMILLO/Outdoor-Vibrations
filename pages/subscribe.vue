@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <main>
       <div class="left">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnyXS_3PzawZCiSd3jUh3r_Krq3KQTUuDAjyeB1KmfgHN1QA/viewform?embedded=true">Loading…</iframe>
@@ -14,12 +13,8 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 export default {
-  name: 'Subscribe',
-  components: {
-    Navbar
-  }
+  name: 'Subscribe'
 }
 </script>
 

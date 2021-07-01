@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <main>
       <div class="left">
         <div class="about-card">
@@ -23,13 +22,8 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 export default {
-  name: 'About',
-  components: {
-    Navbar
-  }
-
+  name: 'About'
 }
 </script>
 
