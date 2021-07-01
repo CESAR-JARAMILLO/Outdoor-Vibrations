@@ -3,7 +3,7 @@
     <Navbar />
     <main>
       <div class="left">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnyXS_3PzawZCiSd3jUh3r_Krq3KQTUuDAjyeB1KmfgHN1QA/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdnyXS_3PzawZCiSd3jUh3r_Krq3KQTUuDAjyeB1KmfgHN1QA/viewform?embedded=true">Loading…</iframe>
       </div>
       <div class="right">
         <img class="main-image" src="../assets/blogging.png" alt="">
