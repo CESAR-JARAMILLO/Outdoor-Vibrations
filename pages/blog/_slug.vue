@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <Navbar /> -->
     <article>
       <img class="main-image" :src="require(`~/assets/${article.img}`)" :alt="article.alt">
       <h1 class="blog-title">

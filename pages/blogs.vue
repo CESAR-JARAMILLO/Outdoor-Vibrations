@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <Navbar /> -->
     <NuxtLink to="blog/my-first-blog-post">
       <div class="featured">
         <div class="featured-text">

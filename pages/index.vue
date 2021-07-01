@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <Navbar /> -->
     <div class="main">
       <div class="left-col">
         <h1>Connecting to Nature</h1>
@@ -90,6 +89,12 @@ h2 {
     font-size: 18px;
 }
 
+.btn:hover {
+  cursor: pointer;
+  width: 146px;
+  height: 66px;
+}
+
 .landing-image {
   height: 180px;
 }
@@ -171,6 +176,11 @@ h2 {
     height: 70px;
     width: 200px;
     font-size: 24px;
+  }
+
+  .btn:hover {
+    height: 76px;
+    width: 206px;
   }
 }
 </style>

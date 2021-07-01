@@ -52,6 +52,10 @@ nav {
     color: black;
 }
 
+.nav-item:hover {
+  color: #58B727 !important;
+}
+
 .brand {
     font-size: 36px;
     font-weight: bold;
@@ -61,13 +65,23 @@ nav {
     color: #58B727 !important;
 }
 
+.nuxt-link-active {
+  color: black !important;
+}
+
 a {
     font-size: 18px;
     font-weight: 600;
 }
 
 .button {
-    background-color: #58b727;
+    background-color:#40916c;
+    /* background-color: #58b727; */
     color: #fff;
+}
+
+.button:hover {
+  background-color: #58b727;
+  color: #fff;
 }
 </style>

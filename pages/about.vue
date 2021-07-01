@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <Navbar /> -->
     <main>
       <div class="left">
         <div class="about-card">
@@ -25,7 +24,6 @@
 <script>
 export default {
   name: 'About'
-
 }
 </script>
 
